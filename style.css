@@ -1,0 +1,183 @@
+/* Palette: Laufey Midnight Blue & Vintage Aesthetics */
+:root {
+    --bg-deep: #090d16;        /* Midnight Blue super escuro */
+    --bg-card: #131b2e;        /* Slate Blue escuro para as seções */
+    --border-base: #1e2942;    /* Borda sutil */
+    --text-main: #f1f5f9;      /* Creme/Branco suave */
+    --text-muted: #94a3b8;    /* Cinza azulado */
+    --accent-gold: #e2c799;    /* Ouro velho / Champanhe */
+    
+    /* Cores das Categoria */
+    --cat-comida: #38bdf8;     /* Azul Sky */
+    --cat-passeio: #818cf8;    /* Indigo */
+    --cat-show: #60a5fa;       /* Azul Claro */
+}
+
+body {
+    font-family: 'Segoe UI', Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+header {
+    background-color: #05080f;
+    border-bottom: 1px solid var(--accent-gold);
+    color: var(--text-main);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--accent-gold);
+    margin-bottom: 8px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.secao-blocos {
+    margin-bottom: 40px;
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-base);
+}
+
+.secao-blocos h2 {
+    border-bottom: 1px solid var(--border-base);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+/* Bordas temáticas por categoria */
+.secao-blocos.comidas { border-left: 5px solid var(--cat-comida); }
+.secao-blocos.comidas h2 { color: var(--cat-comida); }
+
+.secao-blocos.passeios { border-left: 5px solid var(--cat-passeio); }
+.secao-blocos.passeios h2 { color: var(--cat-passeio); }
+
+.secao-blocos.shows { border-left: 5px solid var(--cat-show); }
+.secao-blocos.shows h2 { color: var(--cat-show); }
+
+.grade {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #0b111e;
+    border: 1px solid var(--border-base);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card.destaque {
+    background-color: #111a30;
+    border: 1px solid var(--accent-gold);
+}
+
+.card h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.etiqueta {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    text-transform: uppercase;
+}
+
+.etiqueta.bairro {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: var(--cat-comida);
+}
+
+.etiqueta.imperdivel {
+    background-color: rgba(226, 199, 153, 0.15);
+    color: var(--accent-gold);
+}
+
+.botao {
+    display: block;
+    text-align: center;
+    background-color: var(--accent-gold);
+    color: #090d16;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #f3e5d0;
+    transform: translateY(-2px);
+}
+/* Galeria de Fotos das Páginas Internas */
+.galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.galeria-fotos img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-base);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.galeria-fotos img:hover {
+    transform: scale(1.03);
+    border-color: var(--accent-gold);
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #05080f;
+    color: var(--text-muted);
+    font-size: 14px;
+    border-top: 1px solid var(--border-base);
+    margin-top: 40px;
+}
